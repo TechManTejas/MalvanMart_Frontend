@@ -54,7 +54,7 @@ function Home(){
                             <div className="mx-auto py-5 max-w-screen-2xl px-3 sm:px-10">
                                 <div className="flex w-full">
                                     <div className="flex-shrink-0 xl:pr-6 lg:block w-full lg:w-3/5">
-                                        <div className="swiper swiper-initialized swiper-horizontal swiper-pointer-events mySwiper swiper-backface-hidden">
+                                        {/* <div className="swiper swiper-initialized swiper-horizontal swiper-pointer-events mySwiper swiper-backface-hidden">
                                             <div
                                                 className="swiper-wrapper"
                                                 style={{
@@ -63,8 +63,6 @@ function Home(){
                                                 }}
                                             >
                                                 <div
-                                                    className="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-active h-full relative rounded-lg overflow-hidden"
-                                                    data-swiper-slide-index={2}
                                                     style={{ width: 850, marginRight: 30 }}
                                                 >
                                                     <div className="text-sm text-gray-600 hover:text-emerald-dark">
@@ -98,7 +96,7 @@ function Home(){
                                                             />
                                                             <img
                                                                 alt="Quality Freshness Guaranteed!"
-                                                                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                                                                src="https://cdn.pixabay.com/photo/2023/01/10/09/51/sand-dunes-7709400_960_720.jpg"
                                                                 decoding="async"
                                                                 data-nimg="responsive"
                                                                 className="object-cover"
@@ -460,7 +458,7 @@ function Home(){
                                                 <span className="swiper-pagination-bullet" />
                                                 <span className="swiper-pagination-bullet swiper-pagination-bullet-active" />
                                             </div>
-                                        </div>
+                                        </div> */}
                                     </div>
                                     <div className="w-full hidden lg:flex">
                                         <div className="w-full group">

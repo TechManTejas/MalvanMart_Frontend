@@ -4,6 +4,7 @@ import DownloadApp from "../Components/DownloadApp";
 import MobileFooter from "../Components/MobileTabletFooter";
 import Navbar from "../Components/Navbar";
 import ProductCard from "../Components/ProductCard";
+import ProductModal from "../Components/ProductModal";
 
 function Home(){
     return(
@@ -840,6 +841,7 @@ function Home(){
                 <MobileFooter/>
                 <DesktopFooter/>
             </div>
+            {/* <ProductModal/> */}
         </>
     );
 }

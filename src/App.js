@@ -9,6 +9,7 @@ import Offer from "./Pages/Offer";
 import Order from "./Pages/Order";
 import PrivacyPolicy from "./Pages/PrivacyPolicy";
 import ProductDetails from "./Pages/ProductDetails";
+import Search from "./Pages/Search";
 import TermsAndConditions from "./Pages/TermsAndConditions";
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
           <Route exact path="/terms-and-conditions" element={<TermsAndConditions />} />
           <Route exact path="/checkout" element={<Checkout />} />
           <Route exact path="/order" element={<Order />} />
+          <Route exact path="/search" element={<Search />} />
         </Routes>
       </Router>
     </>

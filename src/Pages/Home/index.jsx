@@ -1,16 +1,19 @@
+import Cart from "../Components/Cart";
+import CategoriesDropDown from "../Components/CategoriesDropDown";
 import CategoryCard from "../Components/CategoryCard";
 import DesktopFooter from "../Components/DesktopFooter";
 import DownloadApp from "../Components/DownloadApp";
 import MobileFooter from "../Components/MobileTabletFooter";
 import Navbar from "../Components/Navbar";
+import PagesDropDown from "../Components/PagesDropDown";
 import ProductCard from "../Components/ProductCard";
 import ProductModal from "../Components/ProductModal";
 
-function Home(){
-    return(
+function Home() {
+    return (
         <>
             <div className="font-sans">
-                <Navbar/>
+                <Navbar />
                 <div className="bg-gray-50">
                     <div className="min-h-screen">
                         <button aria-label="Cart" className="absolute">
@@ -796,11 +799,11 @@ function Home(){
                                     md:grid-cols-4
                                     sm:grid-cols-3
                                 ">
-                                    <CategoryCard/>
+                                    <CategoryCard />
                                 </ul>
                             </div>
                         </div>
-                        <DownloadApp/>
+                        <DownloadApp />
                         <div
                             className="bg-gray-50 py-10 mx-auto max-w-screen-2xl px-3 
                                 lg:py-16
@@ -830,7 +833,7 @@ function Home(){
                                         md:gap-3
                                         sm:grid-cols-3
                                     ">
-                                        <ProductCard/>
+                                        <ProductCard />
                                     </div>
                                 </div>
                             </div>
@@ -838,10 +841,13 @@ function Home(){
                     </div>
                 </div>
                 <div className="flex flex-col h-full justify-between align-middle bg-white rounded cursor-pointer overflow-y-scroll flex-grow scrollbar-hide w-full" />
-                <MobileFooter/>
-                <DesktopFooter/>
+                <MobileFooter />
+                <DesktopFooter />
             </div>
             {/* <ProductModal/> */}
+            {/* <Cart/> */}
+            {/* <CategoriesDropDown/> */}
+            {/* <PagesDropDown/> */}
         </>
     );
 }

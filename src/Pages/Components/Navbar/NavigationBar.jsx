@@ -1,4 +1,11 @@
+import { useNavigate } from 'react-router-dom'
+import CategoriesDropDown from '../CategoriesDropDown';
+import PagesDropDown from '../PagesDropDown';
+
 function NavigationBar(){
+
+    const navigate = useNavigate();
+
     return(
         <>
             <div className="hidden bg-white border-b
@@ -43,14 +50,17 @@ function NavigationBar(){
                                                     />
                                                 </svg>
                                             </button>
+                                            {/* <CategoriesDropDown /> */}
                                         </div>
                                         <button
                                             className="font-serif mx-4 py-2 text-sm font-medium hover:text-emerald-600"
+                                            onClick={() => { navigate("/about-us") }}
                                         >
                                             About Us
                                         </button>
                                         <button
                                             className="font-serif mx-4 py-2 text-sm font-medium hover:text-emerald-600"
+                                            onClick={() => { navigate("/contact-us") }}
                                         >
                                             Contact Us
                                         </button>
@@ -78,9 +88,11 @@ function NavigationBar(){
                                                     />
                                                 </svg>
                                             </button>
+                                            {/* <PagesDropDown/> */}
                                         </div>
                                         <button 
                                             className="relative inline-flex items-center h-6 bg-red-100 font-serif ml-4 py-0 px-2 rounded text-sm font-medium text-red-500 hover:text-emerald-600"
+                                            onClick={() => { navigate("/offer") }}
                                         >
                                             Offers
                                             <div className="absolute flex w-2 h-2 left-auto -right-1 -top-1">
@@ -96,11 +108,13 @@ function NavigationBar(){
                     <div className="flex">
                         <button
                             className="font-serif mx-4 py-2 text-sm font-medium hover:text-emerald-600"
+                            onClick={() => { navigate("/privacy-policy") }}
                         >
                             Privacy Policy
                         </button>
                         <button
                             className="font-serif mx-4 py-2 text-sm font-medium hover:text-emerald-600"
+                            onClick={() => { navigate("/terms-and-conditions") }}
                         >
                             Terms &amp; Conditions
                         </button>

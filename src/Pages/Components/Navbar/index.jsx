@@ -1,3 +1,5 @@
+import CategoriesDropDown from "../CategoriesDropDown";
+import PagesDropDown from "../PagesDropDown";
 import HelplinBar from "./HelplineBar";
 import NavigationBar from "./NavigationBar";
 import SearchBar from "./SearchBar";

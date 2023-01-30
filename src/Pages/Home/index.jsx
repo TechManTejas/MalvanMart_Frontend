@@ -1,3 +1,4 @@
+import { useNavigate } from 'react-router-dom'
 import Cart from "../Components/Cart";
 import CategoriesDropDown from "../Components/CategoriesDropDown";
 import CategoryCard from "../Components/CategoryCard";
@@ -5,11 +6,12 @@ import DesktopFooter from "../Components/DesktopFooter";
 import DownloadApp from "../Components/DownloadApp";
 import MobileFooter from "../Components/MobileTabletFooter";
 import Navbar from "../Components/Navbar";
-import PagesDropDown from "../Components/PagesDropDown";
 import ProductCard from "../Components/ProductCard";
-import ProductModal from "../Components/ProductModal";
 
 function Home() {
+
+    const navigate = useNavigate();
+
     return (
         <>
             <div className="font-sans">
@@ -58,15 +60,17 @@ function Home() {
                             <div className="mx-auto py-5 max-w-screen-2xl px-3 sm:px-10">
                                 <div className="flex w-full">
                                     <div className="flex-shrink-0 xl:pr-6 lg:block w-full lg:w-3/5">
-                                        {/* <div className="swiper swiper-initialized swiper-horizontal swiper-pointer-events mySwiper swiper-backface-hidden">
+                                        <div className="">
                                             <div
                                                 className="swiper-wrapper"
                                                 style={{
-                                                    transform: "translate3d(-2640px, 0px, 0px)",
-                                                    transitionDuration: "0ms"
+                                                    transform: "translateX(-0000px)",
+                                                    // -3520 -2640 -1760
+                                                    transitionDuration: "300ms"
                                                 }}
                                             >
                                                 <div
+                                                    className="flex-shrink-0 h-full relative rounded-lg overflow-hidden "
                                                     style={{ width: 850, marginRight: 30 }}
                                                 >
                                                     <div className="text-sm text-gray-600 hover:text-emerald-dark">
@@ -142,8 +146,7 @@ function Home() {
                                                     </div>
                                                 </div>
                                                 <div
-                                                    className="swiper-slide swiper-slide-duplicate-next h-full relative rounded-lg overflow-hidden"
-                                                    data-swiper-slide-index={0}
+                                                    className="flex-shrink-0 h-full relative rounded-lg overflow-hidden"
                                                     style={{ width: 850, marginRight: 30 }}
                                                 >
                                                     <div className="text-sm text-gray-600 hover:text-emerald-dark">
@@ -221,8 +224,7 @@ function Home() {
                                                     </div>
                                                 </div>
                                                 <div
-                                                    className="swiper-slide swiper-slide-prev h-full relative rounded-lg overflow-hidden"
-                                                    data-swiper-slide-index={1}
+                                                    className="flex-shrink-0 h-full relative rounded-lg overflow-hidden"
                                                     style={{ width: 850, marginRight: 30 }}
                                                 >
                                                     <div className="text-sm text-gray-600 hover:text-emerald-dark">
@@ -299,170 +301,8 @@ function Home() {
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div
-                                                    className="swiper-slide swiper-slide-active h-full relative rounded-lg overflow-hidden"
-                                                    data-swiper-slide-index={2}
-                                                    style={{ width: 850, marginRight: 30 }}
-                                                >
-                                                    <div className="text-sm text-gray-600 hover:text-emerald-dark">
-                                                        <span
-                                                            style={{
-                                                                boxSizing: "border-box",
-                                                                display: "block",
-                                                                overflow: "hidden",
-                                                                width: "initial",
-                                                                height: "initial",
-                                                                background: "none",
-                                                                opacity: 1,
-                                                                border: 0,
-                                                                margin: 0,
-                                                                padding: 0,
-                                                                position: "relative"
-                                                            }}
-                                                        >
-                                                            <span
-                                                                style={{
-                                                                    boxSizing: "border-box",
-                                                                    display: "block",
-                                                                    width: "initial",
-                                                                    height: "initial",
-                                                                    background: "none",
-                                                                    opacity: 1,
-                                                                    border: 0,
-                                                                    margin: 0,
-                                                                    padding: "42.1053% 0px 0px"
-                                                                }}
-                                                            />
-                                                            <img
-                                                                alt="Quality Freshness Guaranteed!"
-                                                                src="/_next/image?url=%2Fslider%2Fslider-3.jpg&w=3840&q=75"
-                                                                decoding="async"
-                                                                data-nimg="responsive"
-                                                                className="object-cover"
-                                                                style={{
-                                                                    position: "absolute",
-                                                                    inset: 0,
-                                                                    boxSizing: "border-box",
-                                                                    padding: 0,
-                                                                    border: "none",
-                                                                    margin: "auto",
-                                                                    display: "block",
-                                                                    width: 0,
-                                                                    height: 0,
-                                                                    minWidth: "100%",
-                                                                    maxWidth: "100%",
-                                                                    minHeight: "100%",
-                                                                    maxHeight: "100%"
-                                                                }}
-                                                                sizes="100vw"
-                                                                srcSet="/_next/image?url=%2Fslider%2Fslider-3.jpg&w=640&q=75 640w, /_next/image?url=%2Fslider%2Fslider-3.jpg&w=750&q=75 750w, /_next/image?url=%2Fslider%2Fslider-3.jpg&w=828&q=75 828w, /_next/image?url=%2Fslider%2Fslider-3.jpg&w=1080&q=75 1080w, /_next/image?url=%2Fslider%2Fslider-3.jpg&w=1200&q=75 1200w, /_next/image?url=%2Fslider%2Fslider-3.jpg&w=1920&q=75 1920w, /_next/image?url=%2Fslider%2Fslider-3.jpg&w=2048&q=75 2048w, /_next/image?url=%2Fslider%2Fslider-3.jpg&w=3840&q=75 3840w"
-                                                            />
-                                                            <noscript />
-                                                        </span>
-                                                    </div>
-                                                    <div className="absolute top-0 left-0 z-10 p-r-16 flex-col flex w-full h-full place-items-start justify-center">
-                                                        <div className="pl-4 pr-12 sm:pl-10 sm:pr-16 w-10/12 lg:w-8/12 xl:w-7/12">
-                                                            <h1 className="mb-2 font-serif text-xl sm:text-lg md:text-2xl line-clamp-1 md:line-clamp-none lg:line-clamp-none lg:text-3xl font-bold text-gray-800">
-                                                                Quality Freshness Guaranteed!
-                                                            </h1>
-                                                            <p className="text-base leading-6 text-gray-600 font-sans line-clamp-1 md:line-clamp-none lg:line-clamp-none">
-                                                                Intrinsicly fashion performance based products
-                                                                rather than accurate benefits...
-                                                            </p>
-                                                            <a
-                                                                className="hidden sm:inline-block lg:inline-block text-sm leading-6 font-serif font-medium mt-6 px-6 py-2 bg-emerald-500 text-center rounded-md text-white hover:bg-emerald-600"
-                                                                href="/search?category=fresh-vegetable"
-                                                            >
-                                                                Shop Now
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div
-                                                    className="swiper-slide swiper-slide-duplicate swiper-slide-next h-full relative rounded-lg overflow-hidden"
-                                                    data-swiper-slide-index={0}
-                                                    style={{ width: 850, marginRight: 30 }}
-                                                >
-                                                    <div className="text-sm text-gray-600 hover:text-emerald-dark">
-                                                        <span
-                                                            style={{
-                                                                boxSizing: "border-box",
-                                                                display: "block",
-                                                                overflow: "hidden",
-                                                                width: "initial",
-                                                                height: "initial",
-                                                                background: "none",
-                                                                opacity: 1,
-                                                                border: 0,
-                                                                margin: 0,
-                                                                padding: 0,
-                                                                position: "relative"
-                                                            }}
-                                                        >
-                                                            <span
-                                                                style={{
-                                                                    boxSizing: "border-box",
-                                                                    display: "block",
-                                                                    width: "initial",
-                                                                    height: "initial",
-                                                                    background: "none",
-                                                                    opacity: 1,
-                                                                    border: 0,
-                                                                    margin: 0,
-                                                                    padding: "42.1053% 0px 0px"
-                                                                }}
-                                                            />
-                                                            <img
-                                                                alt="The Best Quality Products Guaranteed!"
-                                                                src="/_next/image?url=%2Fslider%2Fslider-1.jpg&w=3840&q=75"
-                                                                decoding="async"
-                                                                data-nimg="responsive"
-                                                                className="object-cover"
-                                                                style={{
-                                                                    position: "absolute",
-                                                                    inset: 0,
-                                                                    boxSizing: "border-box",
-                                                                    padding: 0,
-                                                                    border: "none",
-                                                                    margin: "auto",
-                                                                    display: "block",
-                                                                    width: 0,
-                                                                    height: 0,
-                                                                    minWidth: "100%",
-                                                                    maxWidth: "100%",
-                                                                    minHeight: "100%",
-                                                                    maxHeight: "100%"
-                                                                }}
-                                                                sizes="100vw"
-                                                                srcSet="/_next/image?url=%2Fslider%2Fslider-1.jpg&w=640&q=75 640w, /_next/image?url=%2Fslider%2Fslider-1.jpg&w=750&q=75 750w, /_next/image?url=%2Fslider%2Fslider-1.jpg&w=828&q=75 828w, /_next/image?url=%2Fslider%2Fslider-1.jpg&w=1080&q=75 1080w, /_next/image?url=%2Fslider%2Fslider-1.jpg&w=1200&q=75 1200w, /_next/image?url=%2Fslider%2Fslider-1.jpg&w=1920&q=75 1920w, /_next/image?url=%2Fslider%2Fslider-1.jpg&w=2048&q=75 2048w, /_next/image?url=%2Fslider%2Fslider-1.jpg&w=3840&q=75 3840w"
-                                                            />
-                                                        </span>
-                                                    </div>
-                                                    <div className="absolute top-0 left-0 z-10 p-r-16 flex-col flex w-full h-full place-items-start justify-center">
-                                                        <div className="pl-4 pr-12 sm:pl-10 sm:pr-16 w-10/12 lg:w-8/12 xl:w-7/12">
-                                                            <h1 className="mb-2 font-serif text-xl sm:text-lg md:text-2xl line-clamp-1 md:line-clamp-none lg:line-clamp-none lg:text-3xl font-bold text-gray-800">
-                                                                The Best Quality Products Guaranteed!
-                                                            </h1>
-                                                            <p className="text-base leading-6 text-gray-600 font-sans line-clamp-1 md:line-clamp-none lg:line-clamp-none">
-                                                                Dramatically facilitate effective total linkage
-                                                                for go forward processes...
-                                                            </p>
-                                                            <a
-                                                                className="hidden sm:inline-block lg:inline-block text-sm leading-6 font-serif font-medium mt-6 px-6 py-2 bg-emerald-500 text-center rounded-md text-white hover:bg-emerald-600"
-                                                                href="/search?Category=biscuits--cakes"
-                                                            >
-                                                                Shop Now
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                </div>
                                             </div>
-                                            <div className="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal">
-                                                <span className="swiper-pagination-bullet" />
-                                                <span className="swiper-pagination-bullet" />
-                                                <span className="swiper-pagination-bullet swiper-pagination-bullet-active" />
-                                            </div>
-                                        </div> */}
+                                        </div>
                                     </div>
                                     <div className="w-full hidden lg:flex">
                                         <div className="w-full group">
@@ -763,12 +603,12 @@ function Home() {
                                                 </a>
                                             </p>
                                         </div>
-                                        <a
+                                        <button
                                             className="text-sm font-serif font-medium px-6 py-2 bg-emerald-500 text-center rounded-full text-white hover:bg-emerald-700"
-                                            href="/search?Category=organic-food"
+                                            onClick={()=>{navigate("/search?Category=organic-food")}}
                                         >
                                             Shop Now
-                                        </a>
+                                        </button>
                                     </div>
                                 </div>
                             </div>
@@ -846,8 +686,6 @@ function Home() {
             </div>
             {/* <ProductModal/> */}
             {/* <Cart/> */}
-            {/* <CategoriesDropDown/> */}
-            {/* <PagesDropDown/> */}
         </>
     );
 }

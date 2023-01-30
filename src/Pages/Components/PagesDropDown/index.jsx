@@ -1,4 +1,9 @@
+import { useNavigate } from 'react-router-dom'
+
 function PagesDropDown() {
+
+    const navigate = useNavigate();
+
     return (
         <>
             <div
@@ -6,7 +11,7 @@ function PagesDropDown() {
                 id="headlessui-popover-panel-196"
                 tabIndex={-1}
             >
-                <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-y-scroll flex-grow scrollbar-hide w-full h-full">
+                <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-y-auto flex-grow scrollbar-hide w-full h-full">
                     <div className="relative grid gap-2 px-6 py-6">
                         <span className="p-2 flex font-serif items-center rounded-md hover:bg-gray-50 w-full hover:text-emerald-600">
                             <svg
@@ -28,12 +33,12 @@ function PagesDropDown() {
                                 <path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z" />
                                 <path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z" />
                             </svg>
-                            <a
+                            <button
                                 className="inline-flex items-center justify-between ml-2 text-sm font-medium w-full hover:text-emerald-600"
-                                href="/offer"
+                                onClick={() => { navigate("/offer") }}
                             >
                                 Offer
-                            </a>
+                            </button>
                         </span>
                         <span className="p-2 flex font-serif items-center rounded-md hover:bg-gray-50 w-full hover:text-emerald-600">
                             <svg
@@ -62,12 +67,12 @@ function PagesDropDown() {
                                     d="M80 176a16 16 0 00-16 16v216c0 30.24 25.76 56 56 56h272c30.24 0 56-24.51 56-54.75V192a16 16 0 00-16-16zm80 0v-32a96 96 0 0196-96h0a96 96 0 0196 96v32"
                                 />
                             </svg>
-                            <a
+                            <button
                                 className="inline-flex items-center justify-between ml-2 text-sm font-medium w-full hover:text-emerald-600"
-                                href="/checkout"
+                                onClick={() => { navigate("/checkout") }}
                             >
                                 Checkout
-                            </a>
+                            </button>
                         </span>
                         <span className="p-2 flex font-serif items-center rounded-md hover:bg-gray-50 w-full hover:text-emerald-600">
                             <svg
@@ -89,7 +94,7 @@ function PagesDropDown() {
                             </svg>
                             <a
                                 className="inline-flex items-center justify-between ml-2 text-sm font-medium w-full hover:text-emerald-600"
-                                href="/faq"
+                                onClick={() => { navigate("/faq") }}
                             >
                                 FAQ
                             </a>
@@ -113,12 +118,12 @@ function PagesDropDown() {
                                     d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
                                 />
                             </svg>
-                            <a
+                            <button
                                 className="inline-flex items-center justify-between ml-2 text-sm font-medium w-full hover:text-emerald-600"
-                                href="/about-us"
+                                onClick={() => { navigate("/about-us") }}
                             >
                                 About Us
-                            </a>
+                            </button>
                         </span>
                         <span className="p-2 flex font-serif items-center rounded-md hover:bg-gray-50 w-full hover:text-emerald-600">
                             <svg
@@ -141,7 +146,7 @@ function PagesDropDown() {
                             </svg>
                             <a
                                 className="inline-flex items-center justify-between ml-2 text-sm font-medium w-full hover:text-emerald-600"
-                                href="/contact-us"
+                                onClick={() => { navigate("/contact-us") }}
                             >
                                 Contact Us
                             </a>
@@ -167,7 +172,7 @@ function PagesDropDown() {
                             </svg>
                             <a
                                 className="inline-flex items-center justify-between ml-2 text-sm font-medium w-full hover:text-emerald-600"
-                                href="/privacy-policy"
+                                onClick={() => { navigate("/privacy-policy") }}
                             >
                                 Privacy Policy
                             </a>
@@ -191,12 +196,12 @@ function PagesDropDown() {
                                     d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
                                 />
                             </svg>
-                            <a
+                            <button
                                 className="inline-flex items-center justify-between ml-2 text-sm font-medium w-full hover:text-emerald-600"
-                                href="/terms-and-conditions"
+                                onClick={() => { navigate("/terms-and-conditions") }}
                             >
                                 Terms &amp; Conditions
-                            </a>
+                            </button>
                         </span>
                         <span className="p-2 flex font-serif items-center rounded-md hover:bg-gray-50 w-full hover:text-emerald-600">
                             <svg
@@ -216,12 +221,12 @@ function PagesDropDown() {
                                 <line x1={12} y1={8} x2={12} y2={12} />
                                 <line x1={12} y1={16} x2="12.01" y2={16} />
                             </svg>
-                            <a
+                            <button
                                 className="inline-flex items-center justify-between ml-2 text-sm font-medium w-full hover:text-emerald-600"
-                                href="/404"
+                                onClick={() => { navigate("/404") }}
                             >
                                 404
-                            </a>
+                            </button>
                         </span>
                     </div>
                 </div>

@@ -6,10 +6,10 @@ function CategoriesDropDown() {
                 id="headlessui-popover-panel-106"
                 tabIndex={-1}
             >
-                <div className="rounded-md shadow-lg ring-1 ring-black ring-opacity-5 overflow-y-scroll flex-grow scrollbar-hide w-full h-full">
+                <div className="rounded-md shadow-lg ring-1 ring-black ring-opacity-5 overflow-y-auto flex-grow scrollbar-hide w-full h-full">
                     <div className="flex flex-col w-full h-full bg-white cursor-pointer scrollbar-hide">
-                        <div className="overflow-y-scroll scrollbar-hide w-full max-h-full">
-                            <div className="relative grid gap-2 p-6">
+                        <div className="overflow-y-auto scrollbar-hide w-full max-h-full">
+                            <div className="relative grid gap-2 p-6" style={{height:'630px'}}>
                                 <a
                                     className="p-2 flex items-center rounded-md hover:bg-gray-50 w-full hover:text-emerald-600"
                                     role="button"

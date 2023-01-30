@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import FourZeroFour from "./Pages/404";
 import AboutUs from "./Pages/AboutUs";
 import Checkout from "./Pages/Checkout";
 import ContactUs from "./Pages/ContactUs";
@@ -28,6 +29,7 @@ function App() {
           <Route exact path="/checkout" element={<Checkout />} />
           <Route exact path="/order" element={<Order />} />
           <Route exact path="/search" element={<Search />} />
+          <Route exact path="/404" element={<FourZeroFour />} />
         </Routes>
       </Router>
     </>

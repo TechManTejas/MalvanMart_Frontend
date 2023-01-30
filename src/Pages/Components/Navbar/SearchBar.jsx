@@ -1,4 +1,9 @@
+import { useNavigate } from 'react-router-dom'
+
 function SearchBar() {
+
+    const navigate = useNavigate();
+    
     return (
         <>
             <div className="max-w-screen-2xl mx-auto px-3 
@@ -11,7 +16,7 @@ function SearchBar() {
                         xl:mr-12
                         lg:block lg:mr-12
                         md:hidden 
-                    ">
+                    " onClick={() => { navigate("/") }}>
                         <span
                             style={{
                                 boxSizing: "border-box",

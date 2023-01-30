@@ -1,4 +1,9 @@
+import { useNavigate } from 'react-router-dom'
+
 function HelplineBar() {
+
+    const navigate = useNavigate();
+
     return (
         <>
             <div className="hidden lg:block bg-gray-100">
@@ -30,11 +35,11 @@ function HelplineBar() {
                         <div className="flex items-center
                             lg:text-right
                         ">
-                            <button className="font-medium hover:text-emerald-600">
+                            <button className="font-medium hover:text-emerald-600" onClick={()=> {navigate("/about-us")}}>
                                 About Us
                             </button>
                             <span className="mx-2">|</span>
-                            <button className="font-medium hover:text-emerald-600">
+                            <button className="font-medium hover:text-emerald-600" onClick={() => {navigate("/contact-us")}}>
                                 Contact Us
                             </button>
                             <span className="mx-2">|</span>

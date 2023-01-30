@@ -1,3 +1,5 @@
+import { useState } from 'react';
+import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom'
 import Cart from "../Components/Cart";
 import CategoriesDropDown from "../Components/CategoriesDropDown";
@@ -12,10 +14,25 @@ function Home() {
 
     const navigate = useNavigate();
 
+    const [position, setPosition] = useState(0)
+    const [speed, setSpeed] = useState(300)
+    useEffect(() => {
+        const interval = setInterval(() => {
+            if (position == 0) {
+                setSpeed(300)
+            }
+            setPosition(position + 880);
+            if (position == 880 * 3) {
+                setSpeed(0)
+                setPosition(0)
+            }
+        }, 2000);
+        return () => clearInterval(interval);
+    })
+
     return (
         <>
             <div className="font-sans">
-                <Navbar />
                 <div className="bg-gray-50">
                     <div className="min-h-screen">
                         <button aria-label="Cart" className="absolute">
@@ -60,15 +77,164 @@ function Home() {
                             <div className="mx-auto py-5 max-w-screen-2xl px-3 sm:px-10">
                                 <div className="flex w-full">
                                     <div className="flex-shrink-0 xl:pr-6 lg:block w-full lg:w-3/5">
-                                        <div className="">
+                                        <div className="overflow-hidden">
                                             <div
-                                                className="swiper-wrapper"
+                                                className="flex"
                                                 style={{
-                                                    transform: "translateX(-0000px)",
-                                                    // -3520 -2640 -1760
-                                                    transitionDuration: "300ms"
+                                                    transform: `translateX(-${position}px)`,
+                                                    transitionDuration: `${speed}ms`
                                                 }}
                                             >
+                                                <div
+                                                    className="flex-shrink-0 h-full relative rounded-lg overflow-hidden "
+                                                    style={{ width: 850, marginRight: 30 }}
+                                                >
+                                                    <div className="text-sm text-gray-600 hover:text-emerald-dark">
+                                                        <span
+                                                            style={{
+                                                                boxSizing: "border-box",
+                                                                display: "block",
+                                                                overflow: "hidden",
+                                                                width: "initial",
+                                                                height: "initial",
+                                                                background: "none",
+                                                                opacity: 1,
+                                                                border: 0,
+                                                                margin: 0,
+                                                                padding: 0,
+                                                                position: "relative"
+                                                            }}
+                                                        >
+                                                            <span
+                                                                style={{
+                                                                    boxSizing: "border-box",
+                                                                    display: "block",
+                                                                    width: "initial",
+                                                                    height: "initial",
+                                                                    background: "none",
+                                                                    opacity: 1,
+                                                                    border: 0,
+                                                                    margin: 0,
+                                                                    padding: "42.1053% 0px 0px"
+                                                                }}
+                                                            />
+                                                            <img
+                                                                alt="Quality Freshness Guaranteed!"
+                                                                src="https://cdn.pixabay.com/photo/2023/01/10/09/51/sand-dunes-7709400_960_720.jpg"
+                                                                decoding="async"
+                                                                data-nimg="responsive"
+                                                                className="object-cover"
+                                                                style={{
+                                                                    position: "absolute",
+                                                                    inset: 0,
+                                                                    boxSizing: "border-box",
+                                                                    padding: 0,
+                                                                    border: "none",
+                                                                    margin: "auto",
+                                                                    display: "block",
+                                                                    width: 0,
+                                                                    height: 0,
+                                                                    minWidth: "100%",
+                                                                    maxWidth: "100%",
+                                                                    minHeight: "100%",
+                                                                    maxHeight: "100%"
+                                                                }}
+                                                            />
+                                                            <noscript />
+                                                        </span>
+                                                    </div>
+                                                    <div className="absolute top-0 left-0 z-10 p-r-16 flex-col flex w-full h-full place-items-start justify-center">
+                                                        <div className="pl-4 pr-12 sm:pl-10 sm:pr-16 w-10/12 lg:w-8/12 xl:w-7/12">
+                                                            <h1 className="mb-2 font-serif text-xl sm:text-lg md:text-2xl line-clamp-1 md:line-clamp-none lg:line-clamp-none lg:text-3xl font-bold text-gray-800">
+                                                                The Best Quality Products Guaranteed!
+                                                            </h1>
+                                                            <p className="text-base leading-6 text-gray-600 font-sans line-clamp-1 md:line-clamp-none lg:line-clamp-none">
+                                                                Dramatically facilitate effective total linkage for go forward processes...
+                                                            </p>
+                                                            <a
+                                                                className="hidden sm:inline-block lg:inline-block text-sm leading-6 font-serif font-medium mt-6 px-6 py-2 bg-emerald-500 text-center rounded-md text-white hover:bg-emerald-600"
+                                                                href="/search?category=fresh-vegetable"
+                                                            >
+                                                                Shop Now
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    className="flex-shrink-0 h-full relative rounded-lg overflow-hidden "
+                                                    style={{ width: 850, marginRight: 30 }}
+                                                >
+                                                    <div className="text-sm text-gray-600 hover:text-emerald-dark">
+                                                        <span
+                                                            style={{
+                                                                boxSizing: "border-box",
+                                                                display: "block",
+                                                                overflow: "hidden",
+                                                                width: "initial",
+                                                                height: "initial",
+                                                                background: "none",
+                                                                opacity: 1,
+                                                                border: 0,
+                                                                margin: 0,
+                                                                padding: 0,
+                                                                position: "relative"
+                                                            }}
+                                                        >
+                                                            <span
+                                                                style={{
+                                                                    boxSizing: "border-box",
+                                                                    display: "block",
+                                                                    width: "initial",
+                                                                    height: "initial",
+                                                                    background: "none",
+                                                                    opacity: 1,
+                                                                    border: 0,
+                                                                    margin: 0,
+                                                                    padding: "42.1053% 0px 0px"
+                                                                }}
+                                                            />
+                                                            <img
+                                                                alt="Quality Freshness Guaranteed!"
+                                                                src="https://cdn.pixabay.com/photo/2023/01/10/09/51/sand-dunes-7709400_960_720.jpg"
+                                                                decoding="async"
+                                                                data-nimg="responsive"
+                                                                className="object-cover"
+                                                                style={{
+                                                                    position: "absolute",
+                                                                    inset: 0,
+                                                                    boxSizing: "border-box",
+                                                                    padding: 0,
+                                                                    border: "none",
+                                                                    margin: "auto",
+                                                                    display: "block",
+                                                                    width: 0,
+                                                                    height: 0,
+                                                                    minWidth: "100%",
+                                                                    maxWidth: "100%",
+                                                                    minHeight: "100%",
+                                                                    maxHeight: "100%"
+                                                                }}
+                                                            />
+                                                            <noscript />
+                                                        </span>
+                                                    </div>
+                                                    <div className="absolute top-0 left-0 z-10 p-r-16 flex-col flex w-full h-full place-items-start justify-center">
+                                                        <div className="pl-4 pr-12 sm:pl-10 sm:pr-16 w-10/12 lg:w-8/12 xl:w-7/12">
+                                                            <h1 className="mb-2 font-serif text-xl sm:text-lg md:text-2xl line-clamp-1 md:line-clamp-none lg:line-clamp-none lg:text-3xl font-bold text-gray-800">
+                                                                Best Different Type of Grocery Store
+                                                            </h1>
+                                                            <p className="text-base leading-6 text-gray-600 font-sans line-clamp-1 md:line-clamp-none lg:line-clamp-none">
+                                                                Quickly aggregate empowered networks after emerging products...
+                                                            </p>
+                                                            <a
+                                                                className="hidden sm:inline-block lg:inline-block text-sm leading-6 font-serif font-medium mt-6 px-6 py-2 bg-emerald-500 text-center rounded-md text-white hover:bg-emerald-600"
+                                                                href="/search?category=fresh-vegetable"
+                                                            >
+                                                                Shop Now
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                                 <div
                                                     className="flex-shrink-0 h-full relative rounded-lg overflow-hidden "
                                                     style={{ width: 850, marginRight: 30 }}
@@ -133,8 +299,7 @@ function Home() {
                                                                 Quality Freshness Guaranteed!
                                                             </h1>
                                                             <p className="text-base leading-6 text-gray-600 font-sans line-clamp-1 md:line-clamp-none lg:line-clamp-none">
-                                                                Intrinsicly fashion performance based products
-                                                                rather than accurate benefits...
+                                                                Intrinsicly fashion performance based products rather than accurate benefits...
                                                             </p>
                                                             <a
                                                                 className="hidden sm:inline-block lg:inline-block text-sm leading-6 font-serif font-medium mt-6 px-6 py-2 bg-emerald-500 text-center rounded-md text-white hover:bg-emerald-600"
@@ -146,7 +311,7 @@ function Home() {
                                                     </div>
                                                 </div>
                                                 <div
-                                                    className="flex-shrink-0 h-full relative rounded-lg overflow-hidden"
+                                                    className="flex-shrink-0 h-full relative rounded-lg overflow-hidden "
                                                     style={{ width: 850, marginRight: 30 }}
                                                 >
                                                     <div className="text-sm text-gray-600 hover:text-emerald-dark">
@@ -179,8 +344,8 @@ function Home() {
                                                                 }}
                                                             />
                                                             <img
-                                                                alt="The Best Quality Products Guaranteed!"
-                                                                src="/_next/image?url=%2Fslider%2Fslider-1.jpg&w=3840&q=75"
+                                                                alt="Quality Freshness Guaranteed!"
+                                                                src="https://cdn.pixabay.com/photo/2023/01/10/09/51/sand-dunes-7709400_960_720.jpg"
                                                                 decoding="async"
                                                                 data-nimg="responsive"
                                                                 className="object-cover"
@@ -199,8 +364,6 @@ function Home() {
                                                                     minHeight: "100%",
                                                                     maxHeight: "100%"
                                                                 }}
-                                                                sizes="100vw"
-                                                                srcSet="/_next/image?url=%2Fslider%2Fslider-1.jpg&w=640&q=75 640w, /_next/image?url=%2Fslider%2Fslider-1.jpg&w=750&q=75 750w, /_next/image?url=%2Fslider%2Fslider-1.jpg&w=828&q=75 828w, /_next/image?url=%2Fslider%2Fslider-1.jpg&w=1080&q=75 1080w, /_next/image?url=%2Fslider%2Fslider-1.jpg&w=1200&q=75 1200w, /_next/image?url=%2Fslider%2Fslider-1.jpg&w=1920&q=75 1920w, /_next/image?url=%2Fslider%2Fslider-1.jpg&w=2048&q=75 2048w, /_next/image?url=%2Fslider%2Fslider-1.jpg&w=3840&q=75 3840w"
                                                             />
                                                             <noscript />
                                                         </span>
@@ -211,90 +374,11 @@ function Home() {
                                                                 The Best Quality Products Guaranteed!
                                                             </h1>
                                                             <p className="text-base leading-6 text-gray-600 font-sans line-clamp-1 md:line-clamp-none lg:line-clamp-none">
-                                                                Dramatically facilitate effective total linkage
-                                                                for go forward processes...
+                                                                Dramatically facilitate effective total linkage for go forward processes...
                                                             </p>
                                                             <a
                                                                 className="hidden sm:inline-block lg:inline-block text-sm leading-6 font-serif font-medium mt-6 px-6 py-2 bg-emerald-500 text-center rounded-md text-white hover:bg-emerald-600"
-                                                                href="/search?Category=biscuits--cakes"
-                                                            >
-                                                                Shop Now
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div
-                                                    className="flex-shrink-0 h-full relative rounded-lg overflow-hidden"
-                                                    style={{ width: 850, marginRight: 30 }}
-                                                >
-                                                    <div className="text-sm text-gray-600 hover:text-emerald-dark">
-                                                        <span
-                                                            style={{
-                                                                boxSizing: "border-box",
-                                                                display: "block",
-                                                                overflow: "hidden",
-                                                                width: "initial",
-                                                                height: "initial",
-                                                                background: "none",
-                                                                opacity: 1,
-                                                                border: 0,
-                                                                margin: 0,
-                                                                padding: 0,
-                                                                position: "relative"
-                                                            }}
-                                                        >
-                                                            <span
-                                                                style={{
-                                                                    boxSizing: "border-box",
-                                                                    display: "block",
-                                                                    width: "initial",
-                                                                    height: "initial",
-                                                                    background: "none",
-                                                                    opacity: 1,
-                                                                    border: 0,
-                                                                    margin: 0,
-                                                                    padding: "42.1053% 0px 0px"
-                                                                }}
-                                                            />
-                                                            <img
-                                                                alt="Best Different Type of Grocery Store"
-                                                                src="/_next/image?url=%2Fslider%2Fslider-2.jpg&w=3840&q=75"
-                                                                decoding="async"
-                                                                data-nimg="responsive"
-                                                                className="object-cover"
-                                                                style={{
-                                                                    position: "absolute",
-                                                                    inset: 0,
-                                                                    boxSizing: "border-box",
-                                                                    padding: 0,
-                                                                    border: "none",
-                                                                    margin: "auto",
-                                                                    display: "block",
-                                                                    width: 0,
-                                                                    height: 0,
-                                                                    minWidth: "100%",
-                                                                    maxWidth: "100%",
-                                                                    minHeight: "100%",
-                                                                    maxHeight: "100%"
-                                                                }}
-                                                                sizes="100vw"
-                                                                srcSet="/_next/image?url=%2Fslider%2Fslider-2.jpg&w=640&q=75 640w, /_next/image?url=%2Fslider%2Fslider-2.jpg&w=750&q=75 750w, /_next/image?url=%2Fslider%2Fslider-2.jpg&w=828&q=75 828w, /_next/image?url=%2Fslider%2Fslider-2.jpg&w=1080&q=75 1080w, /_next/image?url=%2Fslider%2Fslider-2.jpg&w=1200&q=75 1200w, /_next/image?url=%2Fslider%2Fslider-2.jpg&w=1920&q=75 1920w, /_next/image?url=%2Fslider%2Fslider-2.jpg&w=2048&q=75 2048w, /_next/image?url=%2Fslider%2Fslider-2.jpg&w=3840&q=75 3840w"
-                                                            />
-                                                            <noscript />
-                                                        </span>
-                                                    </div>
-                                                    <div className="absolute top-0 left-0 z-10 p-r-16 flex-col flex w-full h-full place-items-start justify-center">
-                                                        <div className="pl-4 pr-12 sm:pl-10 sm:pr-16 w-10/12 lg:w-8/12 xl:w-7/12">
-                                                            <h1 className="mb-2 font-serif text-xl sm:text-lg md:text-2xl line-clamp-1 md:line-clamp-none lg:line-clamp-none lg:text-3xl font-bold text-gray-800">
-                                                                Best Different Type of Grocery Store
-                                                            </h1>
-                                                            <p className="text-base leading-6 text-gray-600 font-sans line-clamp-1 md:line-clamp-none lg:line-clamp-none">
-                                                                Quickly aggregate empowered networks after
-                                                                emerging products...
-                                                            </p>
-                                                            <a
-                                                                className="hidden sm:inline-block lg:inline-block text-sm leading-6 font-serif font-medium mt-6 px-6 py-2 bg-emerald-500 text-center rounded-md text-white hover:bg-emerald-600"
-                                                                href="/search?Category=fish--meat"
+                                                                href="/search?category=fresh-vegetable"
                                                             >
                                                                 Shop Now
                                                             </a>
@@ -304,6 +388,7 @@ function Home() {
                                             </div>
                                         </div>
                                     </div>
+
                                     <div className="w-full hidden lg:flex">
                                         <div className="w-full group">
                                             <div className="bg-gray-50 h-full border-2 border-orange-500 transition duration-150 ease-linear transform group-hover:border-emerald-500 rounded shadow">
@@ -605,7 +690,7 @@ function Home() {
                                         </div>
                                         <button
                                             className="text-sm font-serif font-medium px-6 py-2 bg-emerald-500 text-center rounded-full text-white hover:bg-emerald-700"
-                                            onClick={()=>{navigate("/search?Category=organic-food")}}
+                                            onClick={() => { navigate("/search?Category=organic-food") }}
                                         >
                                             Shop Now
                                         </button>

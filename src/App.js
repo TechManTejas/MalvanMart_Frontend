@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import FourZeroFour from "./Pages/404";
 import AboutUs from "./Pages/AboutUs";
 import Checkout from "./Pages/Checkout";
+import Navbar from "./Pages/Components/Navbar";
 import ContactUs from "./Pages/ContactUs";
 import FAQ from "./Pages/FAQ";
 
@@ -17,6 +18,7 @@ function App() {
   return (
     <>
       <Router>
+        <Navbar />
         <Routes>
           <Route exact path="/" element={<Home />} />
           <Route exact path="/product-details" element={<ProductDetails />} />

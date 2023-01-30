@@ -8,7 +8,6 @@ function Order() {
     return (
         <>
             <div className="font-sans">
-                <Navbar />
                 <div className="bg-gray-50">
                     <div className="max-w-screen-2xl mx-auto py-10 px-3 sm:px-6">
                         <div className="bg-emerald-100 rounded-md mb-5 px-4 py-3">

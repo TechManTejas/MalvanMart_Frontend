@@ -1,13 +1,11 @@
-import CategoriesDropDown from "../CategoriesDropDown";
-import PagesDropDown from "../PagesDropDown";
-import HelplinBar from "./HelplineBar";
+import HelplineBar from "./HelplineBar";
 import NavigationBar from "./NavigationBar";
 import SearchBar from "./SearchBar";
 
 function Navbar(){
     return(
         <>
-            <HelplinBar/>
+            <HelplineBar/>
             <div className="bg-emerald-500 sticky top-0 z-20">
                 <SearchBar/>
                 <NavigationBar/>

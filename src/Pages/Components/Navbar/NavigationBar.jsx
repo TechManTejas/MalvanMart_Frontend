@@ -1,12 +1,15 @@
+import { useState } from 'react';
 import { useNavigate } from 'react-router-dom'
 import CategoriesDropDown from '../CategoriesDropDown';
 import PagesDropDown from '../PagesDropDown';
 
-function NavigationBar(){
+function NavigationBar() {
 
     const navigate = useNavigate();
+    const [openPages, setOpenPages] = useState(false);
+    const [openCategories, setOpenCategories] = useState(false)
 
-    return(
+    return (
         <>
             <div className="hidden bg-white border-b
                 xl:block
@@ -30,6 +33,7 @@ function NavigationBar(){
                                                 id="headlessui-popover-button-11"
                                                 type="button"
                                                 aria-expanded="false"
+                                                onClick={()=>setOpenCategories(!openCategories)}
                                             >
                                                 <span className="font-serif text-sm font-medium">
                                                     Categories
@@ -50,7 +54,11 @@ function NavigationBar(){
                                                     />
                                                 </svg>
                                             </button>
-                                            {/* <CategoriesDropDown /> */}
+                                            {openCategories &&
+                                                <>
+                                                <CategoriesDropDown />
+                                                </>
+                                            }
                                         </div>
                                         <button
                                             className="font-serif mx-4 py-2 text-sm font-medium hover:text-emerald-600"
@@ -70,6 +78,7 @@ function NavigationBar(){
                                                 id="headlessui-popover-button-14"
                                                 type="button"
                                                 aria-expanded="false"
+                                                onClick={() => setOpenPages(!openPages)}
                                             >
                                                 <span>Pages</span>
                                                 <svg
@@ -88,9 +97,13 @@ function NavigationBar(){
                                                     />
                                                 </svg>
                                             </button>
-                                            {/* <PagesDropDown/> */}
+                                            {openPages &&
+                                                <>
+                                                    <PagesDropDown />
+                                                </>
+                                            }
                                         </div>
-                                        <button 
+                                        <button
                                             className="relative inline-flex items-center h-6 bg-red-100 font-serif ml-4 py-0 px-2 rounded text-sm font-medium text-red-500 hover:text-emerald-600"
                                             onClick={() => { navigate("/offer") }}
                                         >

@@ -92,12 +92,12 @@ function PagesDropDown() {
                                 <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" />
                                 <line x1={12} y1={17} x2="12.01" y2={17} />
                             </svg>
-                            <a
+                            <button
                                 className="inline-flex items-center justify-between ml-2 text-sm font-medium w-full hover:text-emerald-600"
                                 onClick={() => { navigate("/faq") }}
                             >
                                 FAQ
-                            </a>
+                            </button>
                         </span>
                         <span className="p-2 flex font-serif items-center rounded-md hover:bg-gray-50 w-full hover:text-emerald-600">
                             <svg
@@ -144,12 +144,12 @@ function PagesDropDown() {
                                     d="M21 3l-6 6m0 0V4m0 5h5M5 3a2 2 0 00-2 2v1c0 8.284 6.716 15 15 15h1a2 2 0 002-2v-3.28a1 1 0 00-.684-.948l-4.493-1.498a1 1 0 00-1.21.502l-1.13 2.257a11.042 11.042 0 01-5.516-5.517l2.257-1.128a1 1 0 00.502-1.21L9.228 3.683A1 1 0 008.279 3H5z"
                                 />
                             </svg>
-                            <a
+                            <button
                                 className="inline-flex items-center justify-between ml-2 text-sm font-medium w-full hover:text-emerald-600"
                                 onClick={() => { navigate("/contact-us") }}
                             >
                                 Contact Us
-                            </a>
+                            </button>
                         </span>
                         <span className="p-2 flex font-serif items-center rounded-md hover:bg-gray-50 w-full hover:text-emerald-600">
                             <svg
@@ -170,12 +170,12 @@ function PagesDropDown() {
                                     d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
                                 />
                             </svg>
-                            <a
+                            <button
                                 className="inline-flex items-center justify-between ml-2 text-sm font-medium w-full hover:text-emerald-600"
                                 onClick={() => { navigate("/privacy-policy") }}
                             >
                                 Privacy Policy
-                            </a>
+                            </button>
                         </span>
                         <span className="p-2 flex font-serif items-center rounded-md hover:bg-gray-50 w-full hover:text-emerald-600">
                             <svg

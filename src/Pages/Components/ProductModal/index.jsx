@@ -1,8 +1,8 @@
 function ProductModal() {
     return (
         <>
-            <div id="headlessui-portal-root">
-                <div data-headlessui-portal="">
+            <div>
+                <div>
                     <button
                         type="button"
                         aria-hidden="true"
@@ -21,9 +21,6 @@ function ProductModal() {
                     <div>
                         <div
                             className="fixed inset-0 z-30 overflow-y-auto text-center"
-                            id="headlessui-dialog-590"
-                            role="dialog"
-                            aria-modal="true"
                         >
                             <div className="min-h-screen px-4">
                                 <div
@@ -35,7 +32,6 @@ function ProductModal() {
                                     className="inline-block h-screen align-middle"
                                     aria-hidden="true"
                                 >
-
                                 </span>
                                 <div className="inline-block overflow-y-auto h-full align-middle transition-all transform bg-white shadow-xl rounded-2xl opacity-100 scale-100">
                                     <div className="flex flex-col lg:flex-row md:flex-row w-full max-w-4xl overflow-hidden">

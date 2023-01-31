@@ -56,7 +56,7 @@ function NavigationBar() {
                                             </button>
                                             {openCategories &&
                                                 <>
-                                                <CategoriesDropDown />
+                                                    <CategoriesDropDown />
                                                 </>
                                             }
                                         </div>
@@ -99,7 +99,7 @@ function NavigationBar() {
                                             </button>
                                             {openPages &&
                                                 <>
-                                                    <PagesDropDown />
+                                                    <PagesDropDown/>
                                                 </>
                                             }
                                         </div>

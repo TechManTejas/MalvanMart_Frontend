@@ -9,6 +9,7 @@ import DownloadApp from "../Components/DownloadApp";
 import MobileFooter from "../Components/MobileTabletFooter";
 import Navbar from "../Components/Navbar";
 import ProductCard from "../Components/ProductCard";
+import ProductModal from '../Components/ProductModal';
 
 function Home() {
 
@@ -770,7 +771,8 @@ function Home() {
                 <DesktopFooter />
             </div>
             {/* <ProductModal/> */}
-            {/* <Cart/> */}
+            {/* <Cart /> */}
+            
         </>
     );
 }

@@ -87,7 +87,7 @@ function Home() {
                                                 }}
                                             >
                                                 <div
-                                                    className="flex-shrink-0 h-full relative rounded-lg"
+                                                    className="flex-shrink-0 h-full relative"
                                                     style={{ width: 850, marginRight: 30 }}
                                                 >
                                                     <div className="text-sm text-gray-600 hover:text-emerald-dark">
@@ -124,7 +124,7 @@ function Home() {
                                                                 src="https://cdn.pixabay.com/photo/2023/01/10/09/51/sand-dunes-7709400_960_720.jpg"
                                                                 decoding="async"
                                                                 data-nimg="responsive"
-                                                                className="object-cover"
+                                                                className="object-cover rounded"
                                                                 style={{
                                                                     position: "absolute",
                                                                     inset: 0,
@@ -168,7 +168,7 @@ function Home() {
                                                     </div>
                                                 </div>
                                                 <div
-                                                    className="flex-shrink-0 h-full relative rounded-lg overflow-hidden"
+                                                    className="flex-shrink-0 h-full relative"
                                                     style={{ width: 850, marginRight: 30 }}
                                                 >
                                                     <div className="text-sm text-gray-600 hover:text-emerald-dark">
@@ -205,7 +205,7 @@ function Home() {
                                                                 src="https://cdn.pixabay.com/photo/2023/01/10/09/51/sand-dunes-7709400_960_720.jpg"
                                                                 decoding="async"
                                                                 data-nimg="responsive"
-                                                                className="object-cover"
+                                                                className="object-cover rounded"
                                                                 style={{
                                                                     position: "absolute",
                                                                     inset: 0,
@@ -226,24 +226,30 @@ function Home() {
                                                         </span>
                                                     </div>
                                                     <div className="absolute top-0 left-0 z-10 p-r-16 flex-col flex w-full h-full place-items-start justify-center">
-                                                        <div className="pl-4 pr-12 sm:pl-10 sm:pr-16 w-10/12 lg:w-8/12 xl:w-7/12">
-                                                            <h1 className="mb-2 font-serif text-xl sm:text-lg md:text-2xl line-clamp-1 md:line-clamp-none lg:line-clamp-none lg:text-3xl font-bold text-gray-800">
-                                                                Best Different Type of Grocery Store
-                                                            </h1>
-                                                            <p className="text-base leading-6 text-gray-600 font-sans line-clamp-1 md:line-clamp-none lg:line-clamp-none">
-                                                                Quickly aggregate empowered networks after emerging products...
-                                                            </p>
-                                                            <a
-                                                                className="hidden sm:inline-block lg:inline-block text-sm leading-6 font-serif font-medium mt-6 px-6 py-2 bg-emerald-500 text-center rounded-md text-white hover:bg-emerald-600"
-                                                                href="/search?category=fresh-vegetable"
-                                                            >
-                                                                Shop Now
-                                                            </a>
+                                                        <div className="flex items-center justify-evenly ">
+                                                            <div className="pl-4 pr-12 sm:pl-10 sm:pr-16 w-10/12 lg:w-8/12 xl:w-7/12">
+                                                                <h1 className="mb-2 font-serif text-xl sm:text-lg md:text-2xl line-clamp-1 md:line-clamp-none lg:line-clamp-none lg:text-3xl font-bold text-gray-800">
+                                                                    The Best Quality Products Guaranteed!
+                                                                </h1>
+                                                                <p className="text-base leading-6 text-gray-600 font-sans line-clamp-1 md:line-clamp-none lg:line-clamp-none">
+                                                                    Dramatically facilitate effective total linkage for go forward processes...
+                                                                </p>
+                                                                <a
+                                                                    className="hidden sm:inline-block lg:inline-block text-sm leading-6 font-serif font-medium mt-6 px-6 py-2 bg-emerald-500 text-center rounded-md text-white hover:bg-emerald-600"
+                                                                    href="/search?category=fresh-vegetable"
+                                                                >
+                                                                    Shop Now
+                                                                </a>
+                                                            </div>
+                                                            <img
+                                                                className="h-[500px]"
+                                                                src="ship.png"
+                                                            />
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div
-                                                    className="flex-shrink-0 h-full relative rounded-lg overflow-hidden "
+                                                    className="flex-shrink-0 h-full relative"
                                                     style={{ width: 850, marginRight: 30 }}
                                                 >
                                                     <div className="text-sm text-gray-600 hover:text-emerald-dark">
@@ -280,7 +286,7 @@ function Home() {
                                                                 src="https://cdn.pixabay.com/photo/2023/01/10/09/51/sand-dunes-7709400_960_720.jpg"
                                                                 decoding="async"
                                                                 data-nimg="responsive"
-                                                                className="object-cover"
+                                                                className="object-cover rounded"
                                                                 style={{
                                                                     position: "absolute",
                                                                     inset: 0,
@@ -301,24 +307,30 @@ function Home() {
                                                         </span>
                                                     </div>
                                                     <div className="absolute top-0 left-0 z-10 p-r-16 flex-col flex w-full h-full place-items-start justify-center">
-                                                        <div className="pl-4 pr-12 sm:pl-10 sm:pr-16 w-10/12 lg:w-8/12 xl:w-7/12">
-                                                            <h1 className="mb-2 font-serif text-xl sm:text-lg md:text-2xl line-clamp-1 md:line-clamp-none lg:line-clamp-none lg:text-3xl font-bold text-gray-800">
-                                                                Quality Freshness Guaranteed!
-                                                            </h1>
-                                                            <p className="text-base leading-6 text-gray-600 font-sans line-clamp-1 md:line-clamp-none lg:line-clamp-none">
-                                                                Intrinsicly fashion performance based products rather than accurate benefits...
-                                                            </p>
-                                                            <a
-                                                                className="hidden sm:inline-block lg:inline-block text-sm leading-6 font-serif font-medium mt-6 px-6 py-2 bg-emerald-500 text-center rounded-md text-white hover:bg-emerald-600"
-                                                                href="/search?category=fresh-vegetable"
-                                                            >
-                                                                Shop Now
-                                                            </a>
+                                                        <div className="flex items-center justify-evenly ">
+                                                            <div className="pl-4 pr-12 sm:pl-10 sm:pr-16 w-10/12 lg:w-8/12 xl:w-7/12">
+                                                                <h1 className="mb-2 font-serif text-xl sm:text-lg md:text-2xl line-clamp-1 md:line-clamp-none lg:line-clamp-none lg:text-3xl font-bold text-gray-800">
+                                                                    The Best Quality Products Guaranteed!
+                                                                </h1>
+                                                                <p className="text-base leading-6 text-gray-600 font-sans line-clamp-1 md:line-clamp-none lg:line-clamp-none">
+                                                                    Dramatically facilitate effective total linkage for go forward processes...
+                                                                </p>
+                                                                <a
+                                                                    className="hidden sm:inline-block lg:inline-block text-sm leading-6 font-serif font-medium mt-6 px-6 py-2 bg-emerald-500 text-center rounded-md text-white hover:bg-emerald-600"
+                                                                    href="/search?category=fresh-vegetable"
+                                                                >
+                                                                    Shop Now
+                                                                </a>
+                                                            </div>
+                                                            <img
+                                                                className="h-[500px]"
+                                                                src="ship.png"
+                                                            />
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div
-                                                    className="flex-shrink-0 h-full relative rounded-lg"
+                                                    className="flex-shrink-0 h-full relative"
                                                     style={{ width: 850, marginRight: 30 }}
                                                 >
                                                     <div className="text-sm text-gray-600 hover:text-emerald-dark">
@@ -355,7 +367,7 @@ function Home() {
                                                                 src="https://cdn.pixabay.com/photo/2023/01/10/09/51/sand-dunes-7709400_960_720.jpg"
                                                                 decoding="async"
                                                                 data-nimg="responsive"
-                                                                className="object-cover"
+                                                                className="object-cover rounded"
                                                                 style={{
                                                                     position: "absolute",
                                                                     inset: 0,
@@ -684,7 +696,7 @@ function Home() {
                                         </div>
                                     </div>
                                 </div>
-                                <div className="bg-orange-100 px-10 py-6 rounded-lg mt-6 hidden lg:block">
+                                <div className="bg-orange-100 px-10 py-6 rounded-lg mt-12 hidden lg:block">
                                     <div className="flex justify-between items-center">
                                         <div>
                                             <h1 className="font-serif text-xl">

@@ -13,6 +13,7 @@ import PrivacyPolicy from "./Pages/PrivacyPolicy";
 import ProductDetails from "./Pages/ProductDetails";
 import Search from "./Pages/Search";
 import TermsAndConditions from "./Pages/TermsAndConditions";
+import Test from "./Pages/test";
 
 function App() {
   return (
@@ -31,7 +32,7 @@ function App() {
           <Route exact path="/checkout" element={<Checkout />} />
           <Route exact path="/order" element={<Order />} />
           <Route exact path="/search" element={<Search />} />
-          <Route exact path="/404" element={<FourZeroFour />} />
+          <Route exact path="/test" element={<Test />} />
         </Routes>
       </Router>
     </>

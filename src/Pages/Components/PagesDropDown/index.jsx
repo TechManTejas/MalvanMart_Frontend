@@ -74,7 +74,7 @@ function PagesDropDown() {
                                 Checkout
                             </button>
                         </span>
-                        <span className="p-2 flex font-serif items-center rounded-md hover:bg-gray-50 w-full hover:text-emerald-600">
+                        {/* <span className="p-2 flex font-serif items-center rounded-md hover:bg-gray-50 w-full hover:text-emerald-600">
                             <svg
                                 stroke="currentColor"
                                 fill="none"
@@ -98,7 +98,7 @@ function PagesDropDown() {
                             >
                                 FAQ
                             </button>
-                        </span>
+                        </span> */}
                         <span className="p-2 flex font-serif items-center rounded-md hover:bg-gray-50 w-full hover:text-emerald-600">
                             <svg
                                 stroke="currentColor"

@@ -26,7 +26,7 @@ function App() {
           <Route exact path="/about-us" element={<AboutUs />} />
           <Route exact path="/contact-us" element={<ContactUs />} />
           <Route exact path="/offer" element={<Offer />} />
-          <Route exact path="/faq" element={<FAQ />} />
+          {/* <Route exact path="/faq" element={<FAQ />} /> */}
           <Route exact path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route exact path="/terms-and-conditions" element={<TermsAndConditions />} />
           <Route exact path="/checkout" element={<Checkout />} />
